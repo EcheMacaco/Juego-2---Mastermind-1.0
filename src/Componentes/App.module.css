@@ -7,20 +7,11 @@
     
 }
 
-.prueba{
-    flex-direction: column;
-    background-color: #000000;
-    position: fixed;
-    top: 0px;
-    height: 20%;
-    width: 100%;
-    
-}
+
 
 .divArriba{
     background-color: rgb(229, 255, 192);
     width: 100%;
-   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,16 +20,14 @@
 .divAbajo{
     background-color: rgb(229, 255, 192);
     width: 100%;
-   
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .divSelect{
-    background-color: black;
+    background-color: none;
     margin: 40px;
-    background-color: rgb(203, 228, 249);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,19 +35,23 @@
     
 }
 
+
 .select{
     width: 100px;
-    height: auto; 
-    position: relative;
+    height: auto;
+    margin: 2px;
 }
+
+
 
 .divInstrucciones{
     width: 200px;
     min-width: 200px;
-    font-size: 11px;
-    background-color: rgb(103, 152, 96);
+    font-size: 12px;
+    padding: 5px;
+    background-color: rgb(122, 152, 96);
     color: rgb(0, 0, 0);
-    text-align: center;
+    text-align: left;
     
 
 }
@@ -80,19 +73,14 @@
     background-color: rgb(255, 177, 75);
     font-weight: bold;
     border: none;
+    border-radius: 2px;
     box-shadow:  6px 6px 15px rgb(100, 100, 100);
+    user-select: none;
+    cursor: pointer;
 
 }
-
-
-
-.d{
-    width: 200px;
-    min-width: 200px;
-    font-size: 11px;
-    background-color: rgb(122, 96, 152);
-    color: rgb(0, 0, 0);
-    text-align: center;
+.btn:active{
+    transform: scale(95%);
     
-
+    
 }

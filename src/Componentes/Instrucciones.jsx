@@ -12,7 +12,10 @@ const Instrucciones = () => {
     {/* idea... colocar opcion cerrar */}
     <h1>Instrucciones</h1>
     <h3> 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quod necessitatibus et consequatur ipsa nemo unde eveniet autem dolore delectus tempore voluptatum debitis, vero totam natus nam dicta nostrum? Quia exercitationem fugit porro ex cum quis facilis nemo accusantium ab! Repellendus debitis fugiat enim perferendis!</h3>
+     Adivina el código de 4 letras. 
+     Las letras pueden repetirse
+     Se contarán tus aciertos pero sin especificar la ubicación del mismo
+     Tienes 10 intentos para lograrlo... SUERTE!</h3>
     </>
   )
 }

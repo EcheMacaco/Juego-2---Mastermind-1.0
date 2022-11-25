@@ -3,6 +3,7 @@ import estilos from "./Componentes/App.module.css";
 import { useState } from "react";
 import Botones from "./Componentes/Botones";
 import Instrucciones from "./Componentes/Instrucciones";
+import Nota from "./Componentes/Nota";
 
 const LETRAS = ["A", "B", "C", "D", "E"];
 const MAX_INTENTOS = 10;
@@ -60,42 +61,30 @@ function App() {
     while (i < 4) {
       arregloDeValores[i] === valor[i]
         ? (aciertos = aciertos + 1)
-        : console.log("no");
+        : (aciertos = aciertos + 0);
       i++;
-
-      if (aciertos === 4) {
-        setJugando(false);
-        //  modificar contador max intentos
-        setContador(MAX_INTENTOS);
-      }
     }
     if (contador < MAX_INTENTOS) {
       setContador(contador + 1);
       setJugando(true);
-      console.log(valor);
     } else {
       setJugando(false);
       setContador(0);
-      console.log(valor);
     }
     setBien(aciertos);
-    return console.log(bien + " aciertos");
+    
   }
+  
 
-
-
+   
+  
 
   return (
     <div className={estilos.container}>
-          <div className={estilos.prueba} hidden={!jugando}>
-      prueba
-      prueba
-      prueba
-    </div>
-      <div className={estilos.divArriba}  >
-        <div className={estilos.divSelect}>
+   
+      <div className={estilos.divArriba}>
+        <div className={estilos.divSelect} id="w">
           <Select
-    
             isDisabled={!jugando}
             className={estilos.select}
             options={opciones}
@@ -112,7 +101,6 @@ function App() {
             id="select2"
           />
           <Select
-          
             isDisabled={!jugando}
             className={estilos.select}
             options={opciones}
@@ -129,32 +117,28 @@ function App() {
             id="select4"
           />
         </div>
-        <div className={estilos.divInstrucciones} >
+        <div className={estilos.divInstrucciones}>
           <Instrucciones> </Instrucciones>
         </div>
       </div>
       <div className={estilos.divAbajo}>
+        <div className={estilos.divBtn}>
+          
 
-      <div className={estilos.divBtn}>
-        <button className={estilos.btn} disabled={!jugando} onClick={evaluar}>
-          {" "}
-          Evaluar {contador}
-        </button>
-
-        {valor}
-        <Botones comenzar={comenzar} disabled={jugando}>
-          {" "}
-          COMENZAR{" "}
+          
+          <Botones comenzar={comenzar} disabled={jugando} contador={contador} evaluar={evaluar}>
+          
         </Botones>
+        </div>
+
+        <h1>
+           código para adivinar:{valor}
+          <Nota jugando={jugando} codigo={valor} nAciertos={bien} restantes={MAX_INTENTOS - contador}>
+            
+          </Nota>
+          
+        </h1>
       </div>
-
-      <h1>
-        {bien} aciertos!! te quedan {MAX_INTENTOS - contador} intentos{" "}
-      </h1>
-    </div>
-
-   
-    
     </div>
   );
 }
