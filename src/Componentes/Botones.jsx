@@ -7,7 +7,7 @@ const Botones = ({comenzar, disabled, evaluar}) => {
       <button className={estilos.btn} onClick={comenzar} disabled={disabled}>
         COMENZAR
       </button>
-      <button className={estilos.btn} disabled={!disabled} onClick={evaluar}>
+      <button className={estilos.btn} onClick={evaluar} disabled={!disabled} >
         EVALUAR
       </button>
     </div>

@@ -39,6 +39,8 @@ function App() {
   const [valor, setValor] = useState(["A", "-", "J", "U", "G", "A", "R"]);
   const [jugando, setJugando] = useState(false);
   const [bien, setBien] = useState(0);
+  const [textoFinal, setTextoFinal] = useState(false);
+  
 
   function adivinar() {
     let min = 0;
@@ -51,10 +53,13 @@ function App() {
   function comenzar() {
     const arreg = [adivinar(), adivinar(), adivinar(), adivinar()];
     setJugando(true);
+    setContador(0);
+    setTextoFinal(false)
     return setValor(arreg);
   }
 
   function evaluar() {
+   
     let arregloDeValores = [valor1, valor2, valor3, valor4];
     let aciertos = 0;
     var i = 0;
@@ -71,13 +76,23 @@ function App() {
       setJugando(false);
       setContador(0);
     }
-    setBien(aciertos);
+  
+    if (aciertos===4) {
+      setJugando(false);
+    } 
+setBien(aciertos);
+   
+
+ 
     
   }
+ if (contador ==10 && bien<4){
+    setJugando(false);
+    setContador(0);
+    setTextoFinal(true);
+  }
   
-
-   
-  
+ console.log(valor)
 
   return (
     <div className={estilos.container}>
@@ -132,8 +147,10 @@ function App() {
         </div>
 
         <h1>
-           código para adivinar:{valor}
-          <Nota jugando={jugando} codigo={valor} nAciertos={bien} restantes={MAX_INTENTOS - contador}>
+           
+ 
+ 
+          <Nota jugando={jugando} codigo={valor} nAciertos={bien} restantes={MAX_INTENTOS - contador} textoFinal={textoFinal}>
             
           </Nota>
           
