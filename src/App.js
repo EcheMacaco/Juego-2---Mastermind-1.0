@@ -4,6 +4,7 @@ import { useState } from "react";
 import Botones from "./Componentes/Botones";
 import Instrucciones from "./Componentes/Instrucciones";
 import Nota from "./Componentes/Nota";
+import Jugadas from "./Componentes/Jugadas";
 
 const LETRAS = ["A", "B", "C", "D", "E"];
 const MAX_INTENTOS = 10;
@@ -40,6 +41,7 @@ function App() {
   const [jugando, setJugando] = useState(false);
   const [bien, setBien] = useState(0);
   const [textoFinal, setTextoFinal] = useState(false);
+  const [val, setVal] = useState([]);
   
 
   function adivinar() {
@@ -61,6 +63,7 @@ function App() {
   function evaluar() {
    
     let arregloDeValores = [valor1, valor2, valor3, valor4];
+    setVal(arregloDeValores);
     let aciertos = 0;
     var i = 0;
     while (i < 4) {
@@ -134,6 +137,7 @@ setBien(aciertos);
         </div>
         <div className={estilos.divInstrucciones}>
           <Instrucciones> </Instrucciones>
+          <Jugadas nAciertos={bien} codigo={val} jugando={jugando}></Jugadas>
         </div>
       </div>
       <div className={estilos.divAbajo}>
