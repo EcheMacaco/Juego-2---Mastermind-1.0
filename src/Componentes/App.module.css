@@ -1,85 +1,82 @@
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.divArriba {
+  background-color: rgb(229, 255, 192);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.divAbajo {
+  background-color: rgb(229, 255, 192);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.divSelect {
+  background-color: none;
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.select {
+  width: 100px;
+  height: auto;
+  margin: 2px;
+}
+.divInstrucciones {
+  width: 200px;
+  min-width: 200px;
+  font-size: 12px;
+  padding: 5px;
+  background-color: rgb(122, 152, 96);
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+.divBtn {
+  min-width: 100%;
+  max-width: fit-content;
+  max-height: fit-content;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.btn {
+  margin: 10px;
+  width: 90px;
+  height: 30px;
+  background-color: rgb(255, 177, 75);
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 6px 6px 15px rgb(100, 100, 100);
+  user-select: none;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(95%);
 }
 
-
-
-.divArriba{
-    background-color: rgb(229, 255, 192);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.divJugadas {
+  padding: none;
+  min-width: 150px;
+  max-width: 100px;
+ 
 }
-.divAbajo{
-    background-color: rgb(229, 255, 192);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.divSelect{
-    background-color: none;
-    margin: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-}
-
-
-.select{
-    width: 100px;
-    height: auto;
-    margin: 2px;
-}
-
-
-
-.divInstrucciones{
-    width: 200px;
-    min-width: 200px;
-    font-size: 12px;
-    padding: 5px;
-    background-color: rgb(122, 152, 96);
-    color: rgb(0, 0, 0);
-    text-align: left;
-    
-
-}
-
-.divBtn{
-    min-width: 100%;
-    max-width: fit-content;
-    max-height: fit-content;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-
-}
-
-.btn{
-    margin: 10px;
-    width: 90px;
-    height: 30px;
-    background-color: rgb(255, 177, 75);
-    font-weight: bold;
-    border: none;
-    border-radius: 2px;
-    box-shadow:  6px 6px 15px rgb(100, 100, 100);
-    user-select: none;
-    cursor: pointer;
-
-}
-.btn:active{
-    transform: scale(95%);
-    
-    
+.historial {
+  list-style-type: none;
+  text-align: left;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }

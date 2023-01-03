@@ -1,5 +1,7 @@
 import React from 'react'
 let texto = ""
+
+//Devuelve el texto para comenzar el juego, informar cantidad de aciertos y si el usuario ganó o perdió 
 const  Nota = ({nAciertos , restantes, codigo , jugando, textoFinal}) => {
     
     if(jugando && restantes<10){
@@ -10,7 +12,7 @@ const  Nota = ({nAciertos , restantes, codigo , jugando, textoFinal}) => {
     }
     
   if(restantes===10){
-      texto = "a jugar"; 
+      texto = "A jugar"; 
   }
   
   if (textoFinal && nAciertos!==4){
