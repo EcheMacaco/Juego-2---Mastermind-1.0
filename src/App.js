@@ -57,7 +57,7 @@ function App() {
     setJugando(true);
     setContador(0);
     setTextoFinal(false);
-    setHistorial([])
+    setHistorial([]);
     return setValor(arreg);
   }
 
@@ -99,12 +99,11 @@ function App() {
   }
 
   //Condicional para no tener mas intentos que MAX_INTENTOS
-  if (contador == MAX_INTENTOS && bien < 4) {
+  if (contador === MAX_INTENTOS && bien < 4) {
     setJugando(false);
     setContador(0);
     setTextoFinal(true);
   }
- 
 
   return (
     <div className={estilos.container}>
@@ -147,9 +146,9 @@ function App() {
           />
         </div>
 
-        <div className={estilos.divInstrucciones}>
-          <Instrucciones error={error}> </Instrucciones>
-        </div>
+      
+          <Instrucciones error={error} intentos={MAX_INTENTOS}/>
+        
       </div>
       <div className={estilos.divAbajo}>
         <div className={estilos.divBtn}>

@@ -5,7 +5,7 @@ let texto = ""
 const  Nota = ({nAciertos , restantes, codigo , jugando, textoFinal}) => {
     
     if(jugando && restantes<10){
-        texto =  `${nAciertos} aciertos!! quedan ${restantes} intentos..`
+        texto =  `${nAciertos} aciertos.. No te detengas! Quedan ${restantes} intentos`
     }
     if (nAciertos===4){
     texto = `GANASTE!!! en ` + ( 10 - `${restantes}`)+` intentos`
